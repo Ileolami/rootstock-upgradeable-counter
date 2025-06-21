@@ -32,5 +32,3 @@ npx hardhat run scripts/upgrade_deploy.js --network rskTestnet
 2. [Rootstock Developer Community](http://discord.gg/rootstock)
 3. [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
 4. [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/)
-
-## Lamba
