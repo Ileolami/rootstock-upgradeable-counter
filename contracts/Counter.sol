@@ -20,5 +20,5 @@ contract Counter is Initializable, OwnableUpgradeable {
         count = _count;
     }
 
-    uint256[50] private __gap; // For future storage upgrades
+    uint256[50] private __gap; 
 }

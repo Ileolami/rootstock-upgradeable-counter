@@ -2,8 +2,7 @@ const { ethers, upgrades } = require("hardhat");
 
 async function main() {
   const Counter = await ethers.getContractFactory("Counter");
-  // Pass an initial value (0) to the store function
-  const proxy = await upgrades.deployProxy(Counter, [0], { initializer: 'store' });
+  const proxy = await upgrades.deployProxy(Counter, [0], { initializer: 'initialize' });
 
   // Wait for the deployment to be mined
   await proxy.waitForDeployment();

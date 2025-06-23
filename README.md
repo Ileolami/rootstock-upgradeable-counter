@@ -16,6 +16,10 @@ npm install
 npx hardhat run scripts/deploy.js --network rskTestnet
 ```
 
+```bash
+npm install @openzeppelin/contracts-upgradeable
+```
+
 This will deploy a proxy contract pointing to the Counter implementation.
 
 3. Upgrading
