@@ -11,18 +11,15 @@ contract CounterV2 is Initializable, OwnableUpgradeable {
         __Ownable_init(msg.sender);
         count = _count;
     }
-    
+
     function increment() public {
         count += 1;
     }
 
     function decrement() public {
+        require(count > 0, "Counter: underflow");
         count -= 1;
     }
 
-    function store(uint256 _count) public {
-        count = _count;
-    }
-
-    uint256[50] private __gap; // For future storage upgrades
+    uint256[50] private __gap;
 }

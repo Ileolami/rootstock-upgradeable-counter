@@ -15,10 +15,6 @@ contract Counter is Initializable, OwnableUpgradeable {
     function increment() public {
         count += 1;
     }
-    
-    function store(uint256 _count) public {
-        count = _count;
-    }
 
     uint256[50] private __gap; 
 }
