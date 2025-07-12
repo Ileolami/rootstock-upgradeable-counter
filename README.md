@@ -1,33 +1,68 @@
 # Rootstock Upgradeable Counter Contract Project
 
-The project implements a simple Counter contract that can be upgraded to add new functionality while preserving its state and address Rootstock.
+The project implements a simple Counter contract that can be upgraded to add new functionality while preserving its state and address on Rootstock.
 
 ## Quickstart
 
-1. Installation
+1. Clone the repository:
 
 ```bash
-npm install
+git clone https://github.com/ileolami/rootstock-upgradeable-counter.git
+cd rootstock-upgradeable-counter
 ```
 
-2. To deploy the initial Counter contract:
+2. Install dependencies:
 
 ```bash
-npx hardhat run scripts/deploy.js --network rskTestnet
+npm ci
 ```
 
+3. Set up environment variables:
+
 ```bash
-npm install @openzeppelin/contracts-upgradeable
+cp .env.sample .env
+# Edit .env with your private key and other settings
+```
+
+4. To deploy the initial Counter contract:
+
+```bash
+npm run deploy
 ```
 
 This will deploy a proxy contract pointing to the Counter implementation.
 
-3. Upgrading
-
-After making changes to your contract (e.g., creating CounterV2), you can upgrade the implementation while keeping the same proxy address:
+5. Upgrading to CounterV2:
 
 ```bash
-npx hardhat run scripts/upgrade_deploy.js --network rskTestnet
+npm run upgrade
+```
+
+6. Verify the implementation contract:
+
+```bash
+npm run verify <IMPLEMENTATION_ADDRESS>
+```
+
+After verification, you can view your contract on [Rootstock Testnet Explorer](https://rootstock-testnet.blockscout.com/).
+
+## Environment Variables
+
+- `PRIVATE_KEY`: Your wallet's private key for deploying contracts
+- `rskTestnet_EXPLORER_API_KEY`: API key for contract verification on Rootstock explorer
+
+## Testing
+
+Run the test suite:
+
+```bash
+npm run test
+```
+
+Run linting:
+
+```bash
+npm run lint
 ```
 
 ## Additional Resources

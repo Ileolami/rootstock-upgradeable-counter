@@ -10,8 +10,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm install --save-dev hardhat @openzeppelin/hardhat-upgrades @openzeppelin/contracts-upgradeable @nomicfoundation/hardhat-ethers @nomicfoundation/hardhat-verify ethers dotenv
-
+      - run: npm ci
       - run: npm run test
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          rskTestnet_EXPLORER_API_KEY: ${{ secrets.RSKTESTNET_EXPLORER_API_KEY }}
