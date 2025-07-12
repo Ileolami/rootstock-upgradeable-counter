@@ -3,7 +3,6 @@
   "proxies": [
     {
       "address": "0x5DAC43C0268DeE8820cDa0590C8B5A038e011E56",
-      "txHash": "0x198d73b0873985800f1502d59d8ba146b9cf0812cb3cdb05c5f141bc9cc12d54",
       "kind": "transparent"
     }
   ],
@@ -113,11 +112,15 @@
             }
           ]
         }
-      }
+      },
+      "allAddresses": [
+        "0x3A52AF9C3D34E1Aae2B6bbE5de1Ae4C97Aa7Fd1d",
+        "0x35ec99F1027F1770fED2219E31268f8B353C5abA"
+      ]
     },
     "e0b770ec90e1b2efd16bcd6dbde9dd45c70acf1a49f1054b3fccb709a4fd6408": {
-      "address": "0x35ec99F1027F1770fED2219E31268f8B353C5abA",
-      "txHash": "0x1708c2b3fc021b4c6c969177e459e3d02acc77b61aed33345acc9fb9171c1f80",
+      "address": "0xdaCe53fF88062e47b0f494116a0966361c45bF08",
+      "txHash": "0x02a297e1bd7b0856ee895afa284ced2a97fa4e913df328672f1aed52b2fc17a5",
       "layout": {
         "solcVersion": "0.8.28",
         "storage": [
