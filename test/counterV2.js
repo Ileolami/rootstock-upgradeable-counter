@@ -1,13 +1,11 @@
 const { expect } = require("chai");
 const { ethers, upgrades } = require("hardhat");
-const fs = require("fs");
-const path = require("path");
 
 describe("CounterV2 (Upgradeable)", function () {
-  let owner, other, proxy, CounterV2, proxyAddress;
+  let other, proxy, proxyAddress;
 
   beforeEach(async () => {
-    [owner, other] = await ethers.getSigners();
+    [, other] = await ethers.getSigners();
     
     // For tests, deploy a new proxy
     const Counter = await ethers.getContractFactory("Counter");
@@ -18,7 +16,7 @@ describe("CounterV2 (Upgradeable)", function () {
     proxyAddress = await proxy.getAddress();
     
     // Upgrade to CounterV2 for testing V2 features
-    CounterV2 = await ethers.getContractFactory("CounterV2");
+    const CounterV2 = await ethers.getContractFactory("CounterV2");
     proxy = await upgrades.upgradeProxy(proxyAddress, CounterV2);
   });
 
