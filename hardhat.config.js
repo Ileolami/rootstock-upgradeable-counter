@@ -1,30 +1,30 @@
-require("@nomicfoundation/hardhat-toolbox");
-require("@openzeppelin/hardhat-upgrades");
-require("@nomicfoundation/hardhat-verify");
-require("dotenv").config();
+require('@nomicfoundation/hardhat-toolbox');
+require('@openzeppelin/hardhat-upgrades');
+require('@nomicfoundation/hardhat-verify');
+require('dotenv').config();
 
 module.exports = {
-  solidity: "0.8.28",
+  solidity: '0.8.28',
   networks: {
     rskTestnet: {
-      url: "https://public-node.testnet.rsk.co/",
+      url: 'https://public-node.testnet.rsk.co/',
       accounts: [process.env.PRIVATE_KEY],
       chainId: 31,
     },
   },
   etherscan: {
     apiKey: {
-      'rskTestnet': process.env.rskTestnet_EXPLORER_API_KEY
+      rskTestnet: process.env.rskTestnet_EXPLORER_API_KEY,
     },
     customChains: [
       {
-        network: "rskTestnet",
+        network: 'rskTestnet',
         chainId: 31,
         urls: {
-          apiURL: "https://rootstock-testnet.blockscout.com/api",
-          browserURL: "https://rootstock-testnet.blockscout.com"
-        }
-      }
-    ]
-  }
+          apiURL: 'https://rootstock-testnet.blockscout.com/api',
+          browserURL: 'https://rootstock-testnet.blockscout.com',
+        },
+      },
+    ],
+  },
 };

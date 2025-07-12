@@ -8,7 +8,8 @@
     "upgrade": "npx hardhat run scripts/upgrade_deploy.js --network rskTestnet",
     "verify": "npx hardhat verify --network rskTestnet",
     "test": "npx hardhat test",
-    "lint": "npx eslint . && npx prettier --check ."
+    "lint": "npx eslint . && npx prettier --check .",
+    "format": "npx prettier --write ."
   },
   "keywords": [],
   "author": "",

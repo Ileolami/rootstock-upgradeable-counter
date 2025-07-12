@@ -5,14 +5,12 @@ module.exports = {
     mocha: true,
     node: true,
   },
-  extends: [
-    "eslint:recommended",
-  ],
+  extends: ['eslint:recommended'],
   parserOptions: {
     ecmaVersion: 12,
   },
   rules: {
-    "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
-    "no-console": "off",
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    'no-console': 'off',
   },
 };

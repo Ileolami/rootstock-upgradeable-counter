@@ -10,13 +10,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm install
       - run: npm ci
+      - run: npm run format
       - run: npm run lint
       - run: npm run test
-      - run: npm run deploy
-      - run: npm run upgrade
-      - run: npm run verify
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          rskTestnet_EXPLORER_API_KEY: ${{ secrets.RSKTESTNET_EXPLORER_API_KEY }}
+          RSK_RPC_URL: ${{ secrets.RSK_RPC_URL }}

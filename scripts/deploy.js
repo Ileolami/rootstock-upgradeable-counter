@@ -1,12 +1,12 @@
-const { ethers, upgrades } = require("hardhat");
+const { ethers, upgrades } = require('hardhat');
 
 async function main() {
-  const Counter = await ethers.getContractFactory("Counter");
+  const Counter = await ethers.getContractFactory('Counter');
   const proxy = await upgrades.deployProxy(Counter, [0], { initializer: 'initialize' });
 
   // Wait for the deployment to be mined
   await proxy.waitForDeployment();
-  console.log("Proxy deployed to:", await proxy.getAddress());
+  console.log('Proxy deployed to:', await proxy.getAddress());
 }
 
 main()
