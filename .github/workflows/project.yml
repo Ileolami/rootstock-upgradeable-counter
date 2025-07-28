@@ -17,4 +17,4 @@ jobs:
       - run: npm run test
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          RSK_RPC_URL: ${{ secrets.RSK_Testnet_EXPLORER_API_KEY}}
+          RSK_Testnet_EXPLORER_API_KEY: ${{ secrets.RSK_Testnet_EXPLORER_API_KEY}}
