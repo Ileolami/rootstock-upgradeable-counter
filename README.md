@@ -44,12 +44,12 @@ npm run upgrade
 npm run verify <IMPLEMENTATION_ADDRESS>
 ```
 
-After verification, you can view your contract on [Rootstock Testnet Explorer](https://rootstock-testnet.blockscout.com/).
+After verification, you can view your contract on [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/).
 
 ## Environment Variables
 
 - `PRIVATE_KEY`: Your wallet's private key for deploying contracts
-- `rskTestnet_EXPLORER_API_KEY`: API key for contract verification on Rootstock explorer
+- `RSK_Testnet_EXPLORER_API_KEY`: API key for contract verification on Rootstock explorer
 
 ## Testing
 
@@ -70,4 +70,4 @@ npm run lint
 1. [Rootstock Documentation](https://dev.rootstock.io/)
 2. [Rootstock Developer Community](http://discord.gg/rootstock)
 3. [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
-4. [Rootstock Testnet Explorer](https://rootstock-testnet.blockscout.com/)
+4. [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/)

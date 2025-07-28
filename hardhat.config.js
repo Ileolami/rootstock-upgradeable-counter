@@ -6,7 +6,7 @@ require('dotenv').config();
 module.exports = {
   solidity: '0.8.28',
   networks: {
-    rskTestnet: {
+    RSK_Testnet: {
       url: 'https://public-node.testnet.rsk.co/',
       accounts: [process.env.PRIVATE_KEY],
       chainId: 31,
@@ -14,7 +14,7 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
-      rskTestnet: process.env.rskTestnet_EXPLORER_API_KEY,
+      RSK_Testnet: process.env.RSK_Testnet_EXPLORER_API_KEY,
     },
     customChains: [
       {
